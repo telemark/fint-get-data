@@ -1,6 +1,6 @@
 const rp = require('request-promise')
 
-module.exports = async (url, token, orgId) => {
+module.exports = async (url, token, orgId = false) => {
   if (!url) {
     throw Error('Missing required input: url')
   }
@@ -8,13 +8,18 @@ module.exports = async (url, token, orgId) => {
     throw Error('Missing required input: token')
   }
 
+  let headers = {
+    Authorization: `Bearer ${token}`
+  }
+
+  if (orgId !== false) {
+    headers['x-org-id'] = orgId
+  }
+
   const httpOpts = {
     method: 'GET',
     uri: url,
-    headers: {
-      Authorization: `Bearer ${token}`,
-      'x-org-id': orgId
-    }
+    headers: headers
   }
   try {
     const data = await rp(httpOpts)
