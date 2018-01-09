@@ -19,7 +19,8 @@ module.exports = async (url, token, orgId) => {
   try {
     const data = await rp(httpOpts)
     const jsonData = JSON.parse(data)
-    return jsonData._embedded._entries
+    const entries = jsonData && jsonData._embedded && jsonData._embedded._entries ? jsonData._embedded._entries : []
+    return entries
   } catch (error) {
     throw error
   }
