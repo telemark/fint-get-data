@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+ 
+const args = require('args')
+const getData = require('../index')
+ 
+args
+  .option('token', 'fint OAuth token')
+  .option('url', 'url')
+  .option('org-id', 'Organization ID', '')
+ 
+const flags = args.parse(process.argv)
+getData(flags.url, flags.token, flags.orgId)
+  .then(data => {
+    console.log(JSON.stringify(data, null, 2))
+  }).catch(error => {
+    console.error(error.message)
+  })
+
