@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/telemark/fint-get-data.svg?branch=master)](https://travis-ci.org/telemark/fint-get-data)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 [![Greenkeeper badge](https://badges.greenkeeper.io/telemark/fint-get-data.svg)](https://greenkeeper.io/)
+
 # fint-get-data
 
 ## Use with cli
@@ -29,6 +30,10 @@ fintGetData('https://play-with-fint.felleskomponent.no/administrasjon/personal/p
     console.error(error)
   })
 ```
+
+## Related
+
+- [fint-token-generator](https://github.com/telemark/fint-token-generator) get OAuth token from FINT
 
 ## License
 
