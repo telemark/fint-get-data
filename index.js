@@ -21,6 +21,6 @@ module.exports = async (url, token, orgId) => {
     const jsonData = JSON.parse(data)
     return jsonData._embedded._entries
   } catch (error) {
-    console.error(error)
+    throw error
   }
 }
