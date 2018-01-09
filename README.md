@@ -22,7 +22,7 @@ npx fint-get-data -u https://play-with-fint.felleskomponent.no/administrasjon/pe
 ```js
 const fintGetData = require('fint-get-data')
 
-fintGetData(https://play-with-fint.felleskomponent.no/administrasjon/personal/personalressurs, 'token', 'orgid')
+fintGetData('https://play-with-fint.felleskomponent.no/administrasjon/personal/personalressurs', 'token', 'orgid')
   .then(data => {
     console.log(data)
   }).catch(error => {
