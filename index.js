@@ -1,4 +1,4 @@
-const rp = require('request-promise')
+const axios = require('axios')
 
 module.exports = async (url, token, orgId = false) => {
   if (!url) {
@@ -18,13 +18,12 @@ module.exports = async (url, token, orgId = false) => {
 
   const httpOpts = {
     method: 'GET',
-    uri: url,
-    headers: headers
+    url,
+    headers: orgId ? {'x-org-id': orgId } : undefined
   }
   try {
-    const data = await rp(httpOpts)
-    const jsonData = JSON.parse(data)
-    const entries = jsonData && jsonData._embedded && jsonData._embedded._entries ? jsonData._embedded._entries : jsonData
+    const { data } = await axios(httpOpts)
+    const entries = data && data._embedded && data._embedded._entries ? data._embedded._entries : data
     return entries
   } catch (error) {
     throw error

@@ -1,6 +1,6 @@
 {
   "name": "fint-get-data",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "bin": {
@@ -41,8 +41,7 @@
   "homepage": "https://github.com/telemark/fint-get-data#readme",
   "dependencies": {
     "args": "3.0.8",
-    "request": "2.85.0",
-    "request-promise": "4.2.2"
+    "axios": "0.18.0"
   },
   "devDependencies": {
     "ava": "0.25.0",
