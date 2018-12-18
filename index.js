@@ -19,7 +19,7 @@ module.exports = async (url, token, orgId = false) => {
   const httpOpts = {
     method: 'GET',
     url,
-    headers: orgId ? {'x-org-id': orgId } : undefined
+    headers: orgId ? { 'x-org-id': orgId } : undefined
   }
   try {
     const { data } = await axios(httpOpts)
