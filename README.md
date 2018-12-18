@@ -1,6 +1,5 @@
 [![Build Status](https://travis-ci.org/telemark/fint-get-data.svg?branch=master)](https://travis-ci.org/telemark/fint-get-data)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/fint-get-data.svg)](https://greenkeeper.io/)
 
 # fint-get-data
 
@@ -38,5 +37,3 @@ fintGetData('https://play-with-fint.felleskomponent.no/administrasjon/personal/p
 ## License
 
 [MIT](LICENSE)
-
-![Robohash image of fint-token-generator](https://robots.kebabstudios.party/fint-get-data.png "Robohash image of fint-get-data")
