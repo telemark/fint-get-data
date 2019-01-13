@@ -45,7 +45,7 @@
     "axios": "0.18.0"
   },
   "devDependencies": {
-    "ava": "1.0.1",
+    "ava": "1.1.0",
     "coveralls": "3.0.2",
     "fint-token-generator": "1.0.1",
     "nyc": "13.1.0",
