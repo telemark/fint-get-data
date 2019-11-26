@@ -46,7 +46,7 @@
   },
   "devDependencies": {
     "ava": "2.4.0",
-    "coveralls": "3.0.8",
+    "coveralls": "3.0.9",
     "fint-token-generator": "1.0.1",
     "nyc": "14.1.1",
     "standard": "12.0.1"
